@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<script>
 	let form = document.getElementById("searchForm");
-	function setSearchEngine (){
+	function setSearchEngine(){
 
 		let actions = {
 
@@ -12,18 +12,18 @@
 			'duckDuckGo': 'https://duckduckgo.com/',
 			'bing': 'https://www.bing.com/search',
 			'ask': 'https://www.ask.com/web'
-		}
+		};
 
 
-		let selectedEngine = document.querySelector('input[name=engine]:checked')
+		let selectedEngine = document.querySelector('input[name=engine]:checked');
 		let action = actions[selectedEngine.value];
-		form.setAttribute('action', action)
+		form.setAttribute('action', action);
 
 	};
 
     window.addEventListener("load", function(){
         let form = document.getElementById("searchForm");
-		form.addEventListener("submit", setSearchEngine)
+		form.addEventListener("submit", setSearchEngine);
     });
 	</script>
 </head>
