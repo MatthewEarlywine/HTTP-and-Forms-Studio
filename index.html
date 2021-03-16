@@ -3,7 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<script>
-	let form = document.getElementById("searchForm");
+	
+	window.addEventListener("load", function(){
+		let form = document.getElementById("searchForm");
+        form.addEventListener("submit", setSearchEngine);
+    });
+	
 	function setSearchEngine(){
 
 		let actions = {
@@ -17,14 +22,10 @@
 
 		let selectedEngine = document.querySelector('input[name=engine]:checked');
 		let action = actions[selectedEngine.value];
+		let form = document.getElementById("searchForm");
 		form.setAttribute('action', action);
 
 	};
-
-    window.addEventListener("load", function(){
-        let form = document.getElementById("searchForm");
-		form.addEventListener("submit", setSearchEngine);
-    });
 	</script>
 </head>
 
